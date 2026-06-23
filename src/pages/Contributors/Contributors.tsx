@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import usePageTitle from "../../hooks/usePageTitle";
 import {
   Container,
   Grid,
@@ -25,6 +26,7 @@ interface Contributor {
 }
 
 const ContributorsPage = () => {
+  usePageTitle("Contributors");
   const [contributors, setContributors] = useState<Contributor[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);

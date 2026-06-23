@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import usePageTitle from "../../hooks/usePageTitle";
 
 type PR = {
   title: string;
@@ -16,6 +17,7 @@ type Profile = {
 
 export default function ContributorProfile() {
   const { username } = useParams();
+  usePageTitle(username ? `${username} — Contributor` : "Contributor Profile");
   const [profile, setProfile] = useState<Profile | null>(null);
   const [prs, setPRs] = useState<PR[]>([]);
   const [loading, setLoading] = useState(true);

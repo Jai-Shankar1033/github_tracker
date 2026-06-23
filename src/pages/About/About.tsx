@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Lightbulb, Users, Settings, Search } from "lucide-react";
+import usePageTitle from "../../hooks/usePageTitle";
 
 const features = [
   {
@@ -20,6 +21,7 @@ const features = [
 ];
 
 const About = () => {
+  usePageTitle("About");
   return (
     <div className="bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 text-black dark:text-white min-h-screen">
       

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import { ThemeContext } from "../../context/ThemeContext";
 import type { ThemeContextType } from "../../context/ThemeContext";
+import usePageTitle from "../../hooks/usePageTitle";
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -12,6 +13,7 @@ interface LoginFormData {
 }
 
 const Login: React.FC = () => {
+  usePageTitle("Login");
   const [formData, setFormData] = useState<LoginFormData>({ email: "", password: "" });
   const [message, setMessage] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);

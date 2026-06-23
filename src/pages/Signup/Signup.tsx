@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { User, Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { ThemeContext } from "../../context/ThemeContext";
 import type { ThemeContextType } from "../../context/ThemeContext";
+import usePageTitle from "../../hooks/usePageTitle";
+
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -15,6 +17,7 @@ interface SignUpFormData {
 }
 
 const SignUp: React.FC = () => {
+  usePageTitle("Sign Up")
   const [formData, setFormData] = useState<SignUpFormData>({
     username: "",
     email: "",

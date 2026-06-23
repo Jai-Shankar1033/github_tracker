@@ -1,5 +1,7 @@
+import usePageTitle from "../hooks/usePageTitle";
 import ActivityFeed from "../components/ActivityFeed";
 export default function Activity() {
+  usePageTitle("Activity");
   return (
     <div className="w-full h-full p-6 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-2xl mx-auto">

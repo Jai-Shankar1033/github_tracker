@@ -1,10 +1,12 @@
 import React from 'react';
+import usePageTitle from '../../hooks/usePageTitle';
 import { 
   FaShieldAlt, FaKey, FaDatabase, FaUserCheck, FaCheckCircle, 
   FaLock, FaClock, FaShareAlt, FaCookieBite, FaChild 
 } from 'react-icons/fa';
 
 const PrivacyPolicy: React.FC = () => {
+  usePageTitle("Privacy Policy");
   return (
     <div className="w-full flex-1 flex flex-col items-stretch bg-gray-50 dark:bg-[#0f172a] min-h-full transition-colors duration-200 self-stretch">
       

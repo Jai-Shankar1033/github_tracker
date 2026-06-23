@@ -33,6 +33,7 @@ import { useTheme } from "@mui/material/styles";
 import { useGitHubAuth } from "../../hooks/useGitHubAuth";
 import { useGitHubData } from "../../hooks/useGitHubData";
 import { KeyIcon } from "lucide-react";
+import usePageTitle from "../../hooks/usePageTitle";
 
 const ROWS_PER_PAGE = 10;
 
@@ -49,6 +50,7 @@ interface GitHubItem {
 const Home: React.FC = () => {
 
   const theme = useTheme();
+   usePageTitle("Tracker");
 
   const {
     username,

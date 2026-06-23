@@ -9,8 +9,9 @@ import {
 } from "lucide-react";
 import { ThemeContext } from "../../context/ThemeContext";
 import type { ThemeContextType } from "../../context/ThemeContext";
-
+import usePageTitle from "../../hooks/usePageTitle";
 function Contact() {
+  usePageTitle("Contact");
   const [showPopup, setShowPopup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const themeContext = useContext(ThemeContext) as ThemeContextType;
